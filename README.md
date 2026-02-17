@@ -1,43 +1,49 @@
-🏏 Cricket Scoreboard
+# 🏏 **Cricket Scoreboard**
 
-An interactive cricket scoreboard built using HTML, CSS & JavaScript.
-Click runs, wides, no balls, and wickets to update the score dynamically — like a mini live match!
+An **interactive cricket scoreboard** built using **HTML, CSS & JavaScript**.  
+Track runs, wickets, extras, wides, and no balls dynamically — just like a mini live cricket match! ⚡
 
-🔗 Live preview:
-👉 https://github.com/ggaya0417-png/skillslog/blob/main/project/cricket.html
+---
 
-🎯 Features
+## 🌐 **Live Preview**  
 
-Live scoring: Keeps track of runs and extras in real time.
+[Open in Browser](https://github.com/ggaya0417-png/skillslog/blob/main/project/cricket.html) 👈  
 
-Ball‑by‑ball display: Shows each delivery and marks overs after every 6 balls.
+---
 
-Colored buttons: Easy buttons for scoring actions (1–6, wide, no ball, wicket).
+## 🎯 **Features**  
 
-Cricket‑themed UI: Buttons with colors and scoreboard styling.
+- ✨ **Real-time scoring:** Update runs, extras, wickets with every click.  
+- ⚡ **Ball-by-ball display:** Tracks each delivery and separates overs visually.  
+- 🎨 **Colored buttons:** Buttons for scoring actions (1–6, WIDE, NO BALL, WICKET).  
+- 🏟️ **Cricket-themed UI:** Styled scoreboard with cricket background.  
+- 📐 **Responsive design:** Buttons arranged neatly using CSS Grid.  
+- 🖥️ **JavaScript DOM manipulation:** Updates the scoreboard live.  
 
-CSS Grid layout: Responsive button arrangement.
+---
 
-💻 View and Use
+## 💻 **How to Use**  
 
-Open the file below in your browser to see it working:
+1️⃣ Clone the repository:  
+```bash
+git clone https://github.com/ggaya0417-png/skillslog.git
+2️⃣ Open the file:
+project/cricket.html
 
-📌 https://github.com/ggaya0417-png/skillslog/blob/main/project/cricket.html
-
-Just clone the repo and open cricket.html.
+3️⃣ Click buttons to simulate a cricket match and watch the scoreboard update live! 🎉
 
 🛠️ Built With
 
-HTML – Page structure
+HTML5 – Page structure
 
-CSS – Styles, layout, and background
+CSS3 – Styling, layout, and responsive design
 
 JavaScript – Interactive score logic
 
 🙏 Acknowledgements
 
-Thank you Praveen Gubbala, my mentor, for teaching and guiding me through the fundamentals of frontend development — this project wouldn’t be possible without your support! 🙌
+A huge thank you to Praveen Gubbala 🙌 for mentoring me and teaching frontend development fundamentals. Your guidance made this project possible! 💡
 
-🔗 Skills
+🚀 Skills
 
-#HTML #CSS #JavaScript #FrontendDevelopment #Mentorship #WebDevelopment
+#HTML #CSS #JavaScript #FrontendDevelopment #WebDevelopment #Mentorship #CricketScoreboard
