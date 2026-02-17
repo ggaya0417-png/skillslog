@@ -35,6 +35,7 @@
     <script>
         var score=0;
         var extras=0;
+        var runballcount=0;
         function dot(){
             document.getElementById("score").innerHTML=score;
             var ball=document.createElement("li");
@@ -47,6 +48,11 @@
             var ball=document.createElement("li");
             ball.innerHTML=run;
             document.getElementById("mark").appendChild(ball);
+            runballcount+=1;
+            if(runballcount%6===0){
+                var over=document.createElement("li");
+                over.innerHTML="|"
+            document.getElementById("mark").appendChild(over);}
         }
         function wide(){
             extras+=1;
