@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cricket Scoreboard</title>
+
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f9b0f,#1fcf3a);
+    font-family:Segoe UI, Arial, sans-serif;
+    background-image: url("img1.avif"); background-repeat: no-repeat; background-position:center;
+    background-size:cover;
+}
+
+.container{
+    background:#0b3d0b;
+    color:white;
+    padding:25px;
+    border-radius:15px;
+    width:420px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+    text-align:center;
+}
+
+h2{
+    margin:0 0 15px;
+    font-size:26px;
+}
+
+#mark{
+    list-style:none;
+    padding:10px;
+    margin:10px 0 20px;
+    background:#022b02;
+    border-radius:10px;
+}
+#mark li{
+    display:inline-block;
+    margin:4px 6px;
+    font-size:18px;
+    font-weight:bold;
+    color:#ffd700;
+}
+
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+button{
+    padding:12px;
+    font-size:16px;
+    font-weight:bold;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+
+.dot{background:#555;color:white;}
+.one{background:#ffd700;color:black;}
+.two{background:#d03333;color:black;}
+.three{background:#182c6b;color:black;}
+.four{background:#1e90ff;color:white;}
+.five{background:#095d2c;color:black;}
+.six{background:#ff4500;color:white;}
+.extra{background:#ff69b4;color:black;}
+.wicket{background:#dc143c;color:white;}
+
+button:hover{
+    transform:scale(1.05);
+    opacity:0.9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Score: <span id="score">0</span> /
+         <span id="extras">0</span></h2>
+    <ul id="mark"></ul>
+    <div class="buttons">
+        <button class="dot" onclick="dot()">DOT</button>
+        <button class="one" onclick="addrun(1)">1</button>
+        <button class="two" onclick="addrun(2)">2</button>
+        <button class="three" onclick="addrun(3)">3</button>
+        <button class="four" onclick="addrun(4)">4</button>
+        <button class="five" onclick="addrun(5)">5</button>
+        <button class="six" onclick="addrun(6)">6</button>
+        <button class="extra" onclick="wide()">WIDE</button>
+        <button class="wicket" onclick="wicket()">WICKET</button>
+        <button class="extra" onclick="noball()">NO BALL</button>
+    </div>
+</div>
+<script>
+var score=0;
+var extras=0;
+var runballcount=0;
+function dot(){
+    var ball=document.createElement("li");
+    ball.innerHTML=".";
+    document.getElementById("mark").appendChild(ball);
+}
+function addrun(run){
+    score+=run;
+    document.getElementById("score").innerHTML=score;
+    var ball=document.createElement("li");
+    ball.innerHTML=run;
+    document.getElementById("mark").appendChild(ball);
+    runballcount++;
+    if(runballcount%6===0){
+        var over=document.createElement("li");
+        over.innerHTML="|";
+        document.getElementById("mark").appendChild(over);
+    }
+}
+function wide(){
+    score++;
+    document.getElementById("score").innerHTML=score;
+    var ball=document.createElement("li");
+    ball.innerHTML="Wd";
+    document.getElementById("mark").appendChild(ball);
+}
+function wicket(){
+    extras++;
+    if(extras===10){
+        alert("all out");
+    }
+    document.getElementById("extras").innerHTML=extras;
+    var ball=document.createElement("li");
+    ball.innerHTML="W";
+    document.getElementById("mark").appendChild(ball);
+}
+function noball(){
+    score++;
+    document.getElementById("score").innerHTML=score;
+    var ball=document.createElement("li");
+    ball.innerHTML="Nb";
+    document.getElementById("mark").appendChild(ball);
+}
+</script>
+
+</body>
+</html>
