@@ -26,7 +26,9 @@ Track runs, wickets, extras, wides, and no balls dynamically — just like a min
 
 1️⃣ Clone the repository:  
 ```bash
-git clone https://github.com/ggaya0417-png/skillslog.git
+'git clone https://github.com/ggaya0417-png/skillslog.git'
+
+
 2️⃣ Open the file:
 project/cricket.html
 
