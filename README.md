@@ -25,7 +25,6 @@ Track runs, wickets, extras, wides, and no balls dynamically — just like a min
 ## 💻 **How to Use**  
 
 1️⃣ Clone the repository:  
-```bash
 'git clone https://github.com/ggaya0417-png/skillslog.git'
 
 
