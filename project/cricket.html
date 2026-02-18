@@ -123,7 +123,8 @@ function addrun(run){
         over.innerHTML="|";
         document.getElementById("mark").appendChild(over);
     }
-}
+    }
+
 function wide(){
     score++;
     document.getElementById("score").innerHTML=score;
@@ -131,16 +132,19 @@ function wide(){
     ball.innerHTML="Wd";
     document.getElementById("mark").appendChild(ball);
 }
-function wicket(){
-    extras++;
-    if(extras===10){
-        alert("all out");
-    }
-    document.getElementById("extras").innerHTML=extras;
-    var ball=document.createElement("li");
-    ball.innerHTML="W";
+function wicket() {
+    extras++; 
+    document.getElementById("extras").innerHTML = extras;
+    var ball = document.createElement("li");
+    ball.innerHTML = "W";
     document.getElementById("mark").appendChild(ball);
+    if (extras === 10) {
+        alert("All Out! Game Over 🏏");
+        let buttons = document.querySelectorAll("button");
+        buttons.forEach(btn => btn.disabled = true);
+    }
 }
+
 function noball(){
     score++;
     document.getElementById("score").innerHTML=score;
